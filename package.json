@@ -1,0 +1,22 @@
+{
+    "name": "shipfide",
+    "private": true,
+    "workspaces": [
+        "apps/*",
+        "packages/*"
+    ],
+    "scripts": {
+        "dev": "turbo dev",
+        "build": "turbo build",
+        "test": "turbo test",
+        "server:dev": "pnpm --filter=@shipfide/server dev",
+        "server:build": "pnpm --filter=@shipfide/server build",
+        "server:test": "pnpm --filter=@shipfide/server test",
+        "web:dev": "pnpm --filter=@shipfide/web dev",
+        "web:build": "pnpm --filter=@shipfide/web build"
+    },
+    "devDependencies": {
+        "turbo": "^2.4.0"
+    },
+    "packageManager": "pnpm@10.4.0"
+}

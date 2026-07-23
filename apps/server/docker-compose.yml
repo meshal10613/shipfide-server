@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: shipfide-nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider http://localhost/ || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 3
+    networks:
+      - shipfide-net
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: shipfide-api
+    env_file:
+      - .env
+    environment:
+      # Override only DSN host to connect to the database on the host machine
+      - DSN=host=host.docker.internal user=postgres password=4219 dbname=shipfide-server port=5432 sslmode=disable TimeZone=Asia/Shanghai
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    deploy:
+      replicas: 5
+    depends_on:
+      nginx:
+        condition: service_healthy
+    networks:
+      - shipfide-net
+
+networks:
+  shipfide-net:
+    driver: bridge

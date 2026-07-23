@@ -1,0 +1,29 @@
+# Dependency directories
+node_modules/
+.pnpm-store/
+
+# Build outputs
+bin/
+dist/
+.turbo/
+.next/
+out/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Go build & temp files
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+tmp/
+
+# OS metadata
+.DS_Store
+Thumbs.db

@@ -1,0 +1,15 @@
+{
+  "name": "@shipfide/server",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "go run ./cmd/api",
+    "dev:air": "air",
+    "build": "go build -o bin/api.exe ./cmd/api",
+    "start": "go run ./cmd/api",
+    "test": "go test ./..."
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4"
+  }
+}

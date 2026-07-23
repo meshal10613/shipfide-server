@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  --font-sans: var(--font-plus-jakarta), 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --background: #F9FCFE;
+  --foreground: #404042;
+  --card: #FFFFFF;
+  --card-hover: #F3F7FA;
+  --primary: #DD0033;
+  --primary-hover: #B30028;
+  --primary-light: #FDF0F3;
+  --border-muted: #E5E7EB;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Light Mode Design Utilities */
+.shipfide-card {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 4px 20px -2px rgba(64, 64, 66, 0.05);
+}
+
+.shipfide-pill {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+}
+
+.red-glow {
+  box-shadow: 0 4px 20px rgba(221, 0, 51, 0.2);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F9FCFE;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #DD0033;
+}

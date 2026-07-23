@@ -1,0 +1,12 @@
+.git
+.github
+.idea
+.vscode
+tmp
+vendor
+*.exe
+*.log
+.air.toml
+Dockerfile
+docker-compose.yml
+docker-compose.yaml

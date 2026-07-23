@@ -1,0 +1,10 @@
+{
+  "name": "@shipfide/app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "echo \"mobile application placeholder - run expo start when app is added\"",
+    "build": "echo \"mobile application placeholder\"",
+    "test": "echo \"mobile application placeholder\""
+  }
+}
