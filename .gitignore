@@ -27,3 +27,6 @@ tmp/
 # OS metadata
 .DS_Store
 Thumbs.db
+
+pnpm-lock.yaml
+pnpm-workspace.yaml
